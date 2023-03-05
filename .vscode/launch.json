@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "cwd": "${workspaceFolder}/packages/client",
+            "command": "yarn dev",
+            "name": "client:dev",
+            "request": "launch",
+            "type": "node-terminal"
+        },    {
+            "cwd": "${workspaceFolder}/packages/server",
+            "command": "yarn dev",
+            "name": "server:dev",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ],
+    "compounds": [
+        {
+          "name": "dev",
+          "configurations": ["server:dev", "client:dev"],
+          "stopAll": true
+        }
+      ]
+}
